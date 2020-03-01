@@ -7,22 +7,23 @@ export default class SideHome extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Time: "0",
+      Time: 0,
       Voltage: "0",
       device_array: [],
       show: false
     };
   }
+  componentDidMount(){
 
-  componentDidMount() {
     this.fetchAPI();
   }
+  
   onSegmentClick = () => {
     this.setState({ device_name: "Led", show: true });
     console.log("Accessed");
   };
 
-  fetchAPI() {
+  fetchAPI = () => {
     var device = [];
     var count = 0;
     let pointer = this;
@@ -32,7 +33,7 @@ export default class SideHome extends React.Component {
      pointer.setState({Time: 0});
     }
     if(response.data["data"][response.data["data"].length - 1]["Voltage"] === undefined){
-      pointer.setState({Time: 0});
+      pointer.setState({Voltage: 0});
      }
       pointer.setState({
         Time: response.data["data"][response.data["data"].length - 1]["Time"],
@@ -41,7 +42,10 @@ export default class SideHome extends React.Component {
     });
   }
 
+  
   render() {
+    
+
     let left;
     if (this.state.show) {
       left = (
