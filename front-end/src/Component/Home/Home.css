@@ -1,0 +1,24 @@
+.ui.segment.pushable.sidebar-seg
+{
+    height:auto;
+}
+.power.huge.icon.offonn{
+    color: #e4bf08;
+    margin-top: 1em;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-color: black;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.power.huge.icon.offonn:hover {
+    transform: scale(1.1) perspective(1px);
+  }
+.side-bar-route
+{
+    margin-top: 10em;
+}
+
+.ui.segment{
+    border:none;
+}
