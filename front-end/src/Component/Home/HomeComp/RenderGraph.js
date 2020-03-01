@@ -107,11 +107,6 @@ export default class RenderGraph extends React.Component {
                       </span>
                     </Header>
                   </div>
-                  <div className={"info-div"}>
-                    <Header className={"graph-info"}>
-                      Predicted Uptime: <span></span>
-                    </Header>
-                  </div>
                 </div>
               </Grid.Column>
             </Grid.Row>

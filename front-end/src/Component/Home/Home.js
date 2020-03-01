@@ -1,12 +1,6 @@
 import React from "react";
 import "./Home.css";
-import {
-  Icon,
-  Menu,
-  Segment,
-  Sidebar,
-  Button
-} from "semantic-ui-react";
+import { Icon, Menu, Segment, Sidebar, Button } from "semantic-ui-react";
 
 import Side_Home from "./HomeComp/SideHome";
 import Side_Setting from "./HomeComp/SideSetting";
@@ -44,7 +38,9 @@ export default class Home extends React.Component {
       comp = <Side_Setting />;
     }
     return (
-      <div>
+      
+      <div onClick={this.ShowOn}>
+
         <Sidebar.Pushable className={"sidebar-seg"} as={Segment}>
           <Sidebar
             as={Menu}
@@ -56,28 +52,34 @@ export default class Home extends React.Component {
             visible={this.state.visible}
             width="thin"
           >
-
-            
-              <Icon onClick={this.ShowOff} size={"huge"} className={"offonn"} name="power" />
+            <Icon
+              onClick={this.ShowOff}
+              size={"huge"}
+              className={"offonn"}
+              name="power"
+            />
             <div className={"side-bar-route"}>
-            <Menu.Item onClick={this.showHome} as="a">
-              <Icon name="dashboard" />
-              Dashboard
-            </Menu.Item>
-            <Menu.Item as="a">
-              <Icon name="setting" />
-              Settings
-            </Menu.Item>
-            <Menu.Item as="a">
-              <Icon name="info" />
-              Information
-            </Menu.Item>
+              <Menu.Item onClick={this.showHome} as="a">
+                <Icon name="dashboard" />
+                Dashboard
+              </Menu.Item>
+              <Menu.Item as="a">
+                <Icon name="setting" />
+                Settings
+              </Menu.Item>
+              <Menu.Item as="a">
+                <Icon name="info" />
+                Information
+              </Menu.Item>
             </div>
           </Sidebar>
 
-          <Sidebar.Pusher>{comp}
+
           
+          <Sidebar.Pusher>
+            {comp}
           </Sidebar.Pusher>
+          
         </Sidebar.Pushable>
       </div>
     );

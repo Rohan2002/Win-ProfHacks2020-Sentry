@@ -22,3 +22,29 @@
 .ui.segment{
     border:none;
 }
+.button-holder
+{
+    text-align: center;
+}
+.ui.button.side-bar
+{
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    width: auto;
+    padding: 15px 40px;
+    background: #daa520;
+    border: 5px solid #000;
+    border-radius: 15px;
+    font-family: 'Titillium Web';
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.ui.button.side-bar:hover {
+    transform: scale(1.1) perspective(1px);
+  }
